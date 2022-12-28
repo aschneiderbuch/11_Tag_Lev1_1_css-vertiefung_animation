@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,14 +10,66 @@ html {
 
 section {
     height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
-section:nth-of-type(1){
+section:nth-of-type(1) {
     background-color: red;
 }
-section:nth-of-type(2){
+
+section:nth-of-type(2) {
     background-color: yellow;
 }
-section:nth-of-type(3){
+
+section:nth-of-type(3) {
     background-color: greenyellow;
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    width: 100vw;
+}
+
+div {
+    display: block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+
+.animation {
+    animation-name: pfeil;
+    animation-duration: 2s;
+
+    animation-iteration-count: 1000;
+
+    animation-timing-function: linear;
+}
+
+@keyframes pfeil {
+    0% {
+        transform: translate(0, 0) ;
+    }
+
+    50% {
+        border-radius: 20px;
+        transform: translate(0px,100px)
+    }
+75%{
+    color: rgba(0, 0, 139, 0.145);
+    font-size: 3rem;
+}
+
+    100% {
+        transform: translate(0px,0px);
+    }
+
+
+
 }
